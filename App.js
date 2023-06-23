@@ -23,6 +23,38 @@ const BaseConversion = () => {
         return BaseMax
     }
 
-    
+        const CharacterConversion = (number) => {
+        let result = 0
+        let num = ""
+        switch (number) {
+            case 10:
+                num = "A" //11
+                break;
+            case 11:
+                num = "B"  //12
+                break;
+            case 12:
+                num = "C" //13
+                break;
+            case 13:
+                num = "D"  //14
+                break;
+            case 14:
+                num = "E"  //15
+                break;
+            case 15:
+                num = "F" ///16
+                break;
+            default:
+                if (chang_base > 10 && chang_base <= 16) {
+                    num = "NAN"
+                } else if (number >= 16) {
+                    num = number
+                }
+                break;
+        }
+        result = num
+        return result
+    }
 
 }
