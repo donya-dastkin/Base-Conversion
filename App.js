@@ -95,5 +95,34 @@ const BaseConversion = () => {
 
         return result
     }
-    
+
+    const ConsecutiveDivision = (number) => {
+        let divisor
+        let mod
+        let result = ""
+        divisor = Math.floor(number / chang_base)
+        mod = number % chang_base
+        if (divisor === 0) {
+            result = "1"
+            return result
+        } else {
+            while (true) {
+                if (mod >= 10 && mod <= 15 && chang_base >= 11) {
+                    result += CharacterConversion(mod)
+                } else {
+                    result += mod
+                }
+                if (divisor === 0) {
+                    result = ReverseConvertNumber(result)
+                    return result
+                }
+                mod = divisor % chang_base
+                divisor = Math.floor(divisor / chang_base)
+            }
+        }
+    }
+
+
+
+
 }
