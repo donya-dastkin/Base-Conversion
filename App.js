@@ -57,4 +57,43 @@ const BaseConversion = () => {
         return result
     }
 
+        const BaseConvert = (number) => {
+        number = ReverseConvertNumber(number)
+        let result = 0
+        let value = 0
+        let num = ""
+        for (let i = 0; i <= number.length - 1; i++) {
+            switch (number[i]) {
+                case "A":
+                    num = "10"
+                    break;
+                case "B":
+                    num = "11"
+                    break;
+                case "C":
+                    num = "12"
+                    break;
+                case "D":
+                    num = "13"
+                    break;
+                case "E":
+                    num = "14"
+                    break;
+                case "F":
+                    num = "15"
+                    break;
+                default:
+                    num = number[i]
+                    break;
+            }
+            result += (+ num) * Base ** i
+            if (result >= 10 && result <= 15 && chang_base >= 11) {
+                value = ConsecutiveDivision(result)
+                result = value
+            }
+        }
+
+        return result
+    }
+    
 }
