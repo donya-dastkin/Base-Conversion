@@ -23,7 +23,7 @@ const BaseConversion = () => {
         return BaseMax
     }
 
-        const CharacterConversion = (number) => {
+    const CharacterConversion = (number) => {
         let result = 0
         let num = ""
         switch (number) {
@@ -57,7 +57,7 @@ const BaseConversion = () => {
         return result
     }
 
-        const BaseConvert = (number) => {
+    const BaseConvert = (number) => {
         number = ReverseConvertNumber(number)
         let result = 0
         let value = 0
@@ -122,7 +122,40 @@ const BaseConversion = () => {
         }
     }
 
+    const CheckNumber = CheckNumberBase(value)
 
+    if (value !== "") {
+        if (CheckNumber === true) {
+            if ((+value) === 0) {
+                result = 0
+            } else if (Base === chang_base) {
+                result = value
+            } else if (chang_base >= 10) {
+                if (Base < chang_base) {
+                    const Number = BaseConvert(value)
+                    result = ConsecutiveDivision(Number)
+                } else {
+                    result = BaseConvert(value)
+                }
+            } else if (chang_base <= 9) {
+                const Number = BaseConvert(value)
+                if (Number < chang_base) {
+                    result = Number
+                } else {
+                    result = ConsecutiveDivision(Number)
+                }
+            }
+            resultDemo = `(${value}) based on ${Base} \n equal(${result}) based on ${chang_base}`
+        } else if (CheckNumber === false) {
+            resultDemo = `Figures should be smaller than the base ${value} | ${Base}`
+        }
+    } else {
+        resultDemo = `Please fill in the field ${value}`
+    }
 
-
+    document.getElementById("changBase").innerHTML = resultDemo
+    document.getElementById("changBase").style.color = "green"
+    document.getElementById("changBase").style.background = "#e0dede"
+    document.getElementById("changBase").style.width = "59%"
+    document.getElementById("changBase").style.padding = "10px"
 }
