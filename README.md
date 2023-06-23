@@ -5,17 +5,13 @@
 ## What is the base and what is its use?
 #### Base in mathematics means the number of single digits that are required to write a number in a place-valued numbering machine. For example, in decimal numbering, which is the most common system in the world today, we use the ten digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9; Therefore, the base of this device is ten.
 
->#### Numerical devices are:
+#### Numerical devices are:
 - 2 to 36
-
-
->#### The most famous of them:
+#### The most famous of them:
 - Binary
 - Octal
 - Decimal
 - Hexa Decimal
-
-
 
 ## This project Convert the bases :
 
@@ -28,43 +24,39 @@
 
 2. And to convert the number x in base y to the number z, the digits of x from right to left, respectively, in y^1,y^0 Finally in y^m-1 multiply (m is the number of digits of x) and then add the result to get the number z (the base of the z number is 10).
 
->## Project Code 
+## Project Code 
 
 ##### The main part of the project that determines which function to execute under which conditions is here :
 
 ```javascript
 
-    if (value !== "") {
+if (value !== "") {
         if (CheckNumber === true) {
             if ((+value) === 0) {
                 result = 0
-            } else if (Base === Chengbase) {
+            } else if (Base === chang_base) {
                 result = value
-            } else if (Chengbase >= 10) {
-                if (Base < Chengbase) {
+            } else if (chang_base >= 10) {
+                if (Base < chang_base) {
                     const Number = BaseConvert(value)
                     result = ConsecutiveDivision(Number)
                 } else {
                     result = BaseConvert(value)
                 }
-            } else if (Chengbase <= 9) {
+            } else if (chang_base <= 9) {
                 const Number = BaseConvert(value)
-                if (Number < Chengbase) {
+                if (Number < chang_base) {
                     result = Number
                 } else {
                     result = ConsecutiveDivision(Number)
                 }
             }
-            Resultdemo = `( ${value} ) based on ${Base} \nequal 
-            ( ${result} ) based on ${Chengbase}`
-
+            resultDemo = `(${value}) based on ${Base} \n equal(${result}) based on ${chang_base}`
         } else if (CheckNumber === false) {
-            Resultdemo = `Figures should be smaller than the 
-            base ${value} | ${Base}`
-
+            resultDemo = `Figures should be smaller than the base ${value} | ${Base}`
         }
     } else {
-        Resultdemo = `Please fill in the field ${value}`
+        resultDemo = `Please fill in the field ${value}`
     }
 
 ```
@@ -82,12 +74,12 @@
   ```
   - Change this section like this
   ```javascript
-  return Resultdemo = `( ${value} ) based on ${Base} \nequal ( ${result} ) based on ${Chengbase}`
+          resultDemo = `(${value}) based on ${Base} \n equal(${result}) based on ${chang_base}`
         } else if (CheckNumber === false) {
-            return Resultdemo = `Figures should be smaller than the base ${value} | ${Base}`
+            resultDemo = `Figures should be smaller than the base ${value} | ${Base}`
         }
     } else {
-        return Resultdemo = `Please fill in the field ${value}`
+        resultDemo = `Please fill in the field ${value}`
     }
     ```
     - Add this at the end and just run the js file
