@@ -10,6 +10,49 @@
 </head>
 
 <body>
-    
+    <div class="main">
+        <div class="Base">
+            <form name="formBase" id="formBase">
+                <label>Base</label>
+                <input type="text" name="Number" id="Number" placeholder="Base" required />
+                <select id="Base" class="select_list" name="Base" required form="formBase">
+                    <option value="2">2 - Binary</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8 - Octal</option>
+                    <option value="9">9</option>
+                    <option value="10" selected="">10 - Decimal</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16 - Hex</option>
+                </select>
+                <select id="chang_base" class="select_list" name="chang_base" required form="formBase">
+                    <option value="2" selected="">2 - Binary</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8 - Octal</option>
+                    <option value="9">9</option>
+                    <option value="10">10 - Decimal</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16 - Hex</option>
+                </select>
+                <p id="changBase"></p>
+                <button type="button" onclick="return BaseConversion()">Result</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
